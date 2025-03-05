@@ -14,38 +14,29 @@
 <body>
     <div id="main">
         <header>
-            <ul class="header__info">
+            <ul class="header__info" style="display: none;">
                 <div class="header__wrap">
                     <li class="header__info-pin">
                         <a href="#map-pin">
                             <span>
                                 <img src="./img/icons/pin.png" alt="pin">
                             </span>
-                            <p><span>г. Владивосток,</span> ул. Пушкинская, 17 А</p>
+                            <p>г. Калининград, ул. Пушкинская, 17 А</p>
                         </a>
                     </li>
+                    <li class="header__info-about">Доставка цветов по Калининграду</li>
                     <li class="header__info-whatsapp">
-                        <span>
-                            <img src="./img/icons/phone.png" alt="phone">
-                        </span>
-                        <p class="info-whatsapp__name">WhatsApp</p>
-                        <div class="info-whatsapp__container">
-                            <a href="tel:+78083535335">+ 7 808 353 53 35</a>
-                            <a href="tel:+78888888888">+ 7 888 888 88 88</a>
-                        </div>
-                    </li>
-                    <li class="header__info-cart">
-                        <a href="#cart">
-                            <span>
-                                <img src="./img/icons/cart.png" alt="cart">
-                            </span>
-                            <p>150 000 руб.</p>
-                        </a>
+                        <a href="tel:+78083535335">+ 7 808 353 53 35</a>
                     </li>
                 </div>
             </ul>
             <ul class="header__menu">
                 <li class="menu__item">
+                    <a href="#main-page" class="logotype-wrap">
+                        <img src="./img/icons/logotype.png" alt="logotype" />
+                    </a>
+                </li>
+                <li class="menu__item ">
                     <a href="#catalog">Каталог</a>
                 </li>
                 <li class="menu__item">
@@ -55,27 +46,20 @@
                     <a href="#contacts">Контакты</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#main-page" class="logotype-wrap">
-                        <img src="./img/icons/logotype.png" alt="logotype" />
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="#info">Информация для клиента<span><img src="./img/icons/arrow-down.png"
-                                alt="arrow-down"></span></a>
-                </li>
-                <li class="menu__item">
-                    <a href="#orders"><span><img src="./img/icons/profile.png" alt="profile"></span>Мои заказы</a>
+                    <a href="#info">Информация для клиента</a>
                 </li>
             </ul>
-
         </header>
 
         <div class="main-container">
             <div class="main-container__banner">
                 <img src="./img/banner.jpg" alt="banner">
                 <div class="main-container__content">
-                    <h1>Слоган</h1>
-                    <button type="button" class="btn-green">Каталог</button>
+                    <h1><span class="green">– Каждый </span><span class="brown">букет –</span><br>
+                        <span class="brown">История любви, </span><span class="green"> Радости и Заботы</span>
+                    </h1>
+                    <p>Весеннее настроение в каждом букете – закажите цветы сегодня!</p>
+                    <button type="button" class="btn-green">Выбрать букет</button>
                 </div>
             </div>
             <ul class="main-container__ads">
@@ -98,8 +82,6 @@
                     <p>Накопительная <br> система <span>скидок</span></p>
                 </li>
             </ul>
-
-
             <div class="main-container__steps-order">
                 <h2><span>ЗАКАЗ</span> В 5 ШАГОВ</h2>
                 <ul class="steps-order__list">
@@ -138,8 +120,6 @@
                     <img src="./img/flower-fon.png" alt="flower fon">
                 </span>
             </div>
-
-
             <div class="main-container__gallery-wrap">
                 <div class="main-container__foto-feedback">
                     <div class="main-container__foto">
@@ -151,9 +131,9 @@
                             <img src="./img/photo-4.jpg" alt="photo">
                         </div>
                     </div>
+
                     <div class="main-container__feedback">
                         <h2>Отзывы</h2>
-
                         <ul class="feedback__list">
                             <li class="feedback__item">
                                 <div class="feedback__who">
@@ -260,7 +240,6 @@
                     города доставки. Мы рекомендуем оформлять и оплачивать заказы заранее, особенно в праздничный
                     период. Более подробную информацию смотрите на странице.</p>
             </div>
-
         </div>
 
         <footer>
@@ -269,16 +248,10 @@
                     <a href="#">Каталог</a>
                 </li>
                 <li class="f-menu__item">
-                    <a href="#">Скидки</a>
-                </li>
-                <li class="f-menu__item">
                     <a href="#">Отзывы</a>
                 </li>
                 <li class="f-menu__item">
                     <a href="#">Контакты</a>
-                </li>
-                <li class="f-menu__item">
-                    <a href="#">Оферта</a>
                 </li>
                 <li class="f-menu__item">
                     <a href="#">Информация для клиента</a>
@@ -286,51 +259,25 @@
             </ul>
             <div class="footer__info">
                 <ul class="f-info__contacts">
-                    <li class="f-info__item _active">Контактная информация</li>
                     <li class="f-info__item">
-                        <a href="#">
-                            <span><img src="./img/icons/pin.png" alt=""></span>
-                            <p>г. Владивосток, <br> ул. Пушкинская, 17</p>
-                        </a>
+                        <span><img src="./img/icons/pin.png" alt=""></span>
+                        <p>г. Калининград, <br> ул. Пушкинская, 17</p>
+
                     </li>
                     <li class="f-info__item">
-                        <a href="#">
-                            <span><img src="./img/icons/phone.png" alt=""></span>
-                            <p>+ 7 888 888 88 88</p>
-                        </a>
+                        <span><img src="./img/icons/phone.png" alt="phone"></span>
+                        <a href="tel:+78083535335">+ 7 808 353 53 35</a>
+
                     </li>
                     <li class="f-info__item">
-                        <a href="#">
-                            <span><img src="./img/icons/phone.png" alt=""></span>
-                            <p>+ 7 888 888 88 88</p>
-                        </a>
-                    </li>
-                    <li class="f-info__item">
-                        <a href="#">
-                            <span><img src="./img/icons/time.png" alt=""></span>
-                            <p> Режим работы: <br>
-                                Пн-Сб с 8:00 до 22:00</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="f-info__contacts">
-                    <li class="f-info__item _active">Для посетителей</li>
-                    <li class="f-info__item">
-                        <a href="#">Оформление заказа</a>
-                    </li>
-                    <li class="f-info__item">
-                        <a href="#">Вопросы и ответы</a>
-                    </li>
-                    <li class="f-info__item">
-                        <a href="#">Изменение или отмена заказа</a>
-                    </li>
-                    <li class="f-info__item">
-                        <a href="#">Способы доставки и оплаты</a>
+                        <span><img src="./img/icons/time.png" alt=""></span>
+                        <p> Режим работы: <br>
+                            Пн-Сб с 8:00 до 22:00</p>
                     </li>
                 </ul>
             </div>
             <div class="footer__copyright">
-                <p>© 2025 Доставка цветов</p>
+                <p>© 2025 Цветочная лавка - доставка цветов. Все права защищены </p>
             </div>
         </footer>
     </div>

@@ -1,5 +1,6 @@
 @import url("./fonts.css");
 @import url("./variables.css");
+@import url("./catalog.css");
 
 * {
     margin: 0;
@@ -46,12 +47,13 @@ footer {
 }
 
 .header__info {
-    background: var(--primary-second);
+    background: var(--lavanda);
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 10px 0;
 }
 
 .header__info-pin a {
@@ -62,6 +64,7 @@ footer {
     gap: 10px;
 }
 
+.header__info-about,
 .header__info-pin p {
     color: var(--primary);
     font-family: var(--literal);
@@ -69,56 +72,17 @@ footer {
     font-weight: 100;
 }
 
-.header__info-pin p span {
-    color: var(--green);
-    font-weight: 600;
-}
-
 .header__info-whatsapp {
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 15px 15px 5px 20px;
     height: 100%;
-    background: var(--primary-third);
 }
 
-.header__info-whatsapp span{
-    max-width: 14px;
-    width: 14px;
-    height: 14px;
-}
-
-.header__info-whatsapp span img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.info-whatsapp__name {
-    position: absolute;
-    top: 3px;
-    left: 45px;
-    color: var(--primary);
-    font-family: var(--literal);
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.info-whatsapp__container{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 13px;
-}
-
-.info-whatsapp__container a,
-.header__info-cart a{
+.header__info-whatsapp a,
+.header__info-cart a {
     color: var(--primary);
     font-family: var(--literal);
     font-size: 16px;
@@ -127,11 +91,11 @@ footer {
     transition: all 0.3s ease;
 }
 
-.info-whatsapp__container a:hover{
+.header__info-whatsapp a:hover {
     color: var(--green);
 }
 
-.header__info-cart a{
+.header__info-cart a {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -140,29 +104,29 @@ footer {
     text-transform: lowercase;
 }
 
-.header__menu{
+.header__menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 30px;
     width: 100%;
     max-width: var(--desktop);
     padding: 12px 40px;
 }
 
-.logotype-wrap{
+.logotype-wrap {
     max-width: 105px;
     width: 105px;
     height: 85px;
 }
-.logotype-wrap img{
+.logotype-wrap img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.menu__item a{
+.menu__item a {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -177,7 +141,7 @@ footer {
     letter-spacing: 1px;
 }
 
-.menu__item a:hover{
+.menu__item a:hover {
     color: var(--green);
 }
 
@@ -188,6 +152,11 @@ footer {
 
 .main-container__banner {
     position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; */
     width: 100%;
     height: auto;
     max-height: 700px;
@@ -201,7 +170,7 @@ footer {
 
 .main-container__content {
     position: absolute;
-    top: 0;
+    top: -15px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -209,15 +178,33 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 .main-container__content h1 {
     color: var(--primary);
-    font-family: var(--literal);
-    font-size: 6rem;
+    font-family: var(--karton);
+    font-size: 45px;
     font-weight: 600;
     text-align: center;
+}
+
+.main-container__content p {
+    color: var(--primary-second);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--karton);
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h1 span.brown {
+    color: var(--primary-second);
+}
+h1 span.green {
+    color: var(--green);
 }
 
 .main-container__ads {
@@ -277,7 +264,7 @@ footer {
     max-width: var(--desktop);
 }
 
-.main-container__steps-order{
+.main-container__steps-order {
     position: relative;
     width: 100%;
     display: flex;
@@ -288,7 +275,7 @@ footer {
     padding: 80px 40px 120px;
 }
 
-h2{
+h2 {
     color: var(--primary-second);
     font-family: var(--karton);
     font-size: 24px;
@@ -297,11 +284,11 @@ h2{
     text-transform: uppercase;
 }
 
-h2 span{
+h2 span {
     color: var(--green);
 }
 
-.steps-order__fon{
+.steps-order__fon {
     position: absolute;
     top: -20%;
     left: 0;
@@ -311,13 +298,13 @@ h2 span{
     height: calc(100% + 300px);
 }
 
-.steps-order__fon img{
+.steps-order__fon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.steps-order__list{
+.steps-order__list {
     max-width: var(--desktop);
     width: 100%;
     display: grid;
@@ -326,21 +313,21 @@ h2 span{
     row-gap: 65px;
     column-gap: 55px;
 }
-.steps-order__item{
+.steps-order__item {
     max-width: max-content;
 }
-.steps-order__item span{
+.steps-order__item span {
     min-width: 140px;
     width: 140px;
     height: 140px;
 }
-.steps-order__item span img{
+.steps-order__item span img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.steps-order__item{
+.steps-order__item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -348,7 +335,7 @@ h2 span{
     gap: 25px;
 }
 
-.steps-order__item .item-wrap{
+.steps-order__item .item-wrap {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -356,19 +343,19 @@ h2 span{
     gap: 25px;
 }
 
-.steps-order__item .item-wrap p{
+.steps-order__item .item-wrap p {
     color: var(--primary-second);
     font-family: var(--literal);
     font-size: 24px;
     font-weight: 400;
 }
-.steps-order__item .item-wrap p:first-child{
+.steps-order__item .item-wrap p:first-child {
     color: var(--green);
     font-weight: 600;
     white-space: nowrap;
 }
 
-.main-container__gallery-wrap{
+.main-container__gallery-wrap {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -377,7 +364,7 @@ h2 span{
     padding: 120px 40px;
     background: var(--neutral-fon);
 }
-.main-container__foto-feedback{
+.main-container__foto-feedback {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -388,7 +375,7 @@ h2 span{
 }
 
 .main-container__foto,
-.main-container__feedback{
+.main-container__feedback {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -397,21 +384,21 @@ h2 span{
     width: max-content;
 }
 
-.foto__gallery{
+.foto__gallery {
     display: grid;
     grid-template-columns: repeat(2, 170px);
     gap: 20px;
     width: 100%;
 }
 
-.foto__gallery img{
+.foto__gallery img {
     max-width: 170px;
     width: 170px;
     height: 170px;
     border-radius: 10px;
 }
 
-.feedback__list{
+.feedback__list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -420,7 +407,7 @@ h2 span{
     width: 100%;
 }
 
-.feedback__item{
+.feedback__item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -431,11 +418,11 @@ h2 span{
     border-bottom: 1px solid var(--neutral-second);
 }
 
-.feedback__item:last-child{
+.feedback__item:last-child {
     border: none;
 }
 
-.feedback__item p{
+.feedback__item p {
     color: var(--bordo-fon);
     font-family: var(--literal);
     font-size: 16px;
@@ -443,7 +430,7 @@ h2 span{
     letter-spacing: 1px;
 }
 
-.feedback__who{
+.feedback__who {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -451,18 +438,18 @@ h2 span{
     gap: 10px;
     width: 100%;
 }
-.feedback__name{
+.feedback__name {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     max-width: 250px;
-    column-gap: 15px;  
-    row-gap: 8px;  
+    column-gap: 15px;
+    row-gap: 8px;
 }
 
-.feedback__name .surname{
+.feedback__name .surname {
     color: var(--green);
     font-family: var(--literal);
     font-size: 16px;
@@ -471,7 +458,7 @@ h2 span{
 }
 
 .feedback__name .date,
-.feedback__name .city{
+.feedback__name .city {
     color: var(--neutral);
     font-family: var(--roboto);
     font-size: 14px;
@@ -483,10 +470,10 @@ h2 span{
 footer {
     padding: 0 40px;
     margin-top: auto;
-    background: var(--primary-second);
+    background: var(--lavanda);
 }
 
-.footer__menu{
+.footer__menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -496,7 +483,7 @@ footer {
     padding: 33px 0;
 }
 
-.footer__menu a{
+.footer__menu a {
     color: var(--primary);
     font-family: var(--literal);
     font-size: 16px;
@@ -504,7 +491,7 @@ footer {
     letter-spacing: 1px;
 }
 
-.footer__info{
+.footer__info {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -513,40 +500,47 @@ footer {
     gap: 80px;
     max-width: var(--desktop);
     padding: 30px 0 45px;
-    background: var(--primary-second);
-    border-top: 1px solid #A29BB4;
-    border-bottom: 1px solid #A29BB4;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
 }
 
 .footer__copyright {
     padding: 22px 0;
 }
-
-.f-info__contacts{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 17px;
+.footer__copyright p{
+    color: var(--primary);
 }
 
-.f-info__item a{
+.f-info__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.f-info__item{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 14px;
 }
-.f-info__item._active{
-    color: var(--green);
-    font-family: var(--literal);
-    font-size: 18px;
-    font-weight: 600;
-}
-.f-info__item a{
+
+.f-info__item p,
+.f-info__item a {
     color: var(--primary);
     font-family: var(--literal);
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
+}
+
+.f-menu__item a{
+    transition: all 0.3s ease;
+}
+
+.f-menu__item a:hover {
+    color: var(--primary-third);
 }

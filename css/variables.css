@@ -9,6 +9,7 @@
     --bordo-fon: #746471;
     --orange: #F2994A;
     --green: #6AAE55;
+    --lavanda: #A29BB4;
 
     --desktop: 1200px;
     --tablet: 993px;
@@ -35,9 +36,10 @@ a{
 }
 
 .btn-green{
+    min-width: 150px;
     padding: 13px 60px;
     background: var(--green);
-    border-radius: 10px;
+    border-radius: 25px;
     color: var(--primary);
     font-family: var(--literal);
     font-size: 18px;
